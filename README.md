@@ -1,5 +1,4 @@
-markdown
-
+````markdown
 # promptlint-cli
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
@@ -12,22 +11,25 @@ markdown
 
 ## Features
 
+{% raw %}
+
 - **PL001 — Unclosed Variables** — Flags unclosed `{{` or `[` delimiters, preventing broken variable injection during runtime.
 - **PL002 — Missing System Identity** — Flags prompts that fail to define a system role (e.g., `# System`, `Role:`, `You are a`) within the first 500 characters.
 - **PL003 — Token Waste (Politeness)** — Flags excessive conversational politeness (e.g., "Please", "Kindly", "Thank you") that consumes unnecessary context window tokens.
 - **PL004 — Empty Files** — Flags target files that are completely empty or contain only whitespace characters.
+  {% endraw %}
 
 ## Installation
 
 ```bash
 pip install promptlint-cli
-
 ```
+````
 
 Or install from source:
 
 ```bash
-git clone [https://github.com/your-org/promptlint-cli.git](https://github.com/your-org/promptlint-cli.git)
+git clone [https://github.com/LilRedHat/promptlint-cli.git](https://github.com/LilRedHat/promptlint-cli.git)
 cd promptlint-cli
 pip install .
 
@@ -58,12 +60,15 @@ promptlint check --json *.prompt
 
 ## Rule Reference
 
-| Code  | Severity | Description                                                      |
-| ----- | -------- | ---------------------------------------------------------------- |
-| PL001 | Error    | Unclosed `{{` or `[` delimiters detected.                        |
-| PL002 | Warning  | Missing system identity flag (`# System`, `Role:`, `You are a`). |
-| PL003 | Warning  | Excessive politeness consuming unnecessary tokens.               |
-| PL004 | Error    | Empty or whitespace-only files.                                  |
+{% raw %}
+
+| Code         | Severity | Description                                                      |
+| ------------ | -------- | ---------------------------------------------------------------- |
+| PL001        | Error    | Unclosed `{{` or `[` delimiters detected.                        |
+| PL002        | Warning  | Missing system identity flag (`# System`, `Role:`, `You are a`). |
+| PL003        | Warning  | Excessive politeness consuming unnecessary tokens.               |
+| PL004        | Error    | Empty or whitespace-only files.                                  |
+| {% endraw %} |          |                                                                  |
 
 ## Exit Codes
 
@@ -75,7 +80,7 @@ promptlint check --json *.prompt
 ## Development
 
 ```bash
-git clone [https://github.com/your-org/promptlint-cli.git](https://github.com/your-org/promptlint-cli.git)
+git clone [https://github.com/LilRedHat/promptlint-cli.git](https://github.com/LilRedHat/promptlint-cli.git)
 cd promptlint-cli
 pip install -e .
 pytest tests/
@@ -84,7 +89,7 @@ pytest tests/
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request on the [GitHub repository](https://github.com/your-org/promptlint-cli). Make sure existing tests pass and add new tests for any added functionality.
+Contributions are welcome! Please open an issue or submit a pull request on the [GitHub repository](https://www.google.com/search?q=https://github.com/LilRedHat/promptlint-cli). Make sure existing tests pass and add new tests for any added functionality.
 
 ## License
 
